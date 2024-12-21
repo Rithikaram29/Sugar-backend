@@ -2,10 +2,10 @@ import express from "express";
 const app = express();
 import dotenv from "dotenv";
 dotenv.config();
-import connectDB from "../utils/connectDb.js";
-import { generateOTP, verifyOtp } from "../authController.js";
-import authenticateToken from "../authMiddleware.js";
-import { getUserDetail, updateUser } from "../userController.js";
+import connectDB from "./utils/connectDb";
+import { generateOTP, verifyOtp } from "./authController";
+import authenticateToken from "./authMiddleware.js";
+import { getUserDetail, updateUser } from "./userController";
 import cors from 'cors'
 import serverless from "serverless-http";
 

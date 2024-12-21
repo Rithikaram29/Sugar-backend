@@ -15,7 +15,17 @@ console.log(port)
 app.use(express.json());
 
 const corsOptions = {
-  origin: "http://localhost:5173",  // Allow requests from this origin (your frontend)
+  origin:(origin, callback) => {
+    const allowedOrigins = [
+      "http://localhost:5173",
+      "https://sugar-cosmetics-replica.vercel.app",
+    ];
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },  // Allow requests from this origin (your frontend)
   methods: ["GET", "POST", "PUT", "DELETE"],  // Allow these HTTP methods
   allowedHeaders: ["Content-Type", "Authorization"],  // Allow these headers in requests
   credentials: true,  // Allow cookies or credentials if needed

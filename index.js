@@ -9,9 +9,9 @@ import { getUserDetail, updateUser } from "./userController.js";
 import cors from 'cors'
 
 
-// const port = 3000;
+const port = process.env.PORT
 
-// console.log(port)
+console.log(port)
 app.use(express.json());
 
 const corsOptions = {

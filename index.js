@@ -11,7 +11,7 @@ import cors from 'cors'
 
 // const port = 3000;
 
-console.log(port)
+// console.log(port)
 app.use(express.json());
 
 const corsOptions = {

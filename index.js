@@ -36,7 +36,7 @@ app.use(cors(corsOptions));
 connectDB();
 
 app.get("/health",()=>{
-  resizeBy.send("Server OK!")
+  res.send("Server OK!")
 })
 app.post("/api/user/otp", generateOTP);
 app.post("/api/user/verifyotp", verifyOtp);

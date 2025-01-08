@@ -9,7 +9,7 @@ import { getUserDetail, updateUser } from "./userController.js";
 import cors from 'cors'
 
 
-const port = 3000;
+// const port = 3000;
 
 console.log(port)
 app.use(express.json());
